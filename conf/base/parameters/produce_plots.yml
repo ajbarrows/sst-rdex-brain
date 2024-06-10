@@ -1,0 +1,158 @@
+phenotype_cat_labels: [
+  'Behavioral Inhibition/Approach System (BIS/BAS)',
+  'UPPS-P Impulsive Behavior Scale',
+  'NIH ToolBox',
+  'CBCL Scores'
+]
+
+
+phenotype_plotname_map: {
+  'upps_neg_urgency': 'Negative Urgency',
+  'upps_lack_planning': 'Lack of Planning',
+  'upps_sensation_seeking': 'Sensation Seeking',
+  'upps_positive_urgency': 'Positive Urgency',
+  'upps_lack_perseverance': 'Lacks Perserverence',
+  'nihtb_fluidcomp_uncorr': 'Fluid Composite Score', # Cognition fluid composite
+  'nihtb_crystallized_uncorr': 'Crystallized Intel.',
+  'nihtb_totalcomp_uncorr': 'Total Composite',
+  'nihtb_picvocab_uncorr': 'Picture Vocab.',
+  'nihtb_flanker_uncorr': 'Flanker Task',
+  'nihtb_list_uncorr': 'List Sorting',
+  'nihtb_cardsort_uncorr': 'Card Sorting',
+  'nihtb_pattern_uncorr': 'Pattern Comparison',
+  'nihtb_picture_uncorr': 'Picture Seq. Memory',
+  'nihtb_reading_uncorr': 'Oral Reading Recognition',
+  'anxdep_cbcl_raw': 'AnxDep Syndrome',
+  'withdep_cbcl_raw': 'WithDep Syndrome',
+  'somatic_cbcl_raw': 'Somatic Syndrome',
+  'social_cbcl_raw': 'Social Syndrome',
+  'thought_cbcl_raw': 'Thought Syndrome',
+  'attention_cbcl_raw': 'Attention Syndrome',
+  'rulebreak_cbcl_raw': 'RuleBreak Syndrome',
+  'aggressive_cbcl_raw': 'Aggressive Syndrome',
+  'internal_cbcl_raw': 'Internal Syndrome',
+  'external_cbcl_raw': 'External Syndrome',
+  'totalprob_cbcl_raw': 'TotProb Syndrome',
+  'depress_dsm5_cbcl_raw': 'Depress DSM5',
+  'anxdisord_dsm5_cbcl_raw': 'AnxietyDx DSM5',
+  'somaticprob_dsm5_cbcl_raw': 'SomaticProb DSM5',
+  'adhd_dsm5_cbcl_raw': 'ADHD DSM5',
+  'opposit_dsm5_cbcl_raw': 'Opposit DSM5',
+  'conduct_dsm5_cbcl_raw': "Conduct DSM5",
+  'sct_cbcl_raw': 'Sluggish Cog. Tempo',
+  'ocd_cbcl_raw': 'Obsessive-Compulsive Prob.',
+  'stress_cbcl_raw': 'Stress Scale',
+  'bisbas_bis': 'BIS Sum',
+  'bisbas_bis_mod': 'BIS Sum (Modified)',
+  'bisbas_reward': 'Reward Scale',
+  'bisbas_reward_mod': 'Reward Scale (Modified)',
+  'bisbas_drive': 'Drive Scale',
+  'bisbas_drive_mod': 'Drive Scale (Modified)',
+  'bisbas_fun': 'Fun-Seeking Scale'
+}
+
+phenotype_plotname_map_keyed: {
+  'upps_neg_urgency': 'UPPS: Negative Urgency',
+  'upps_lack_planning': 'UPPS: Lack of Planning',
+  'upps_sensation_seeking': 'UPPS: Sensation Seeking',
+  'upps_positive_urgency': 'UPPS: Positive Urgency',
+  'upps_lack_perseverance': 'UPPS: Lacks Perserverence',
+  'nihtb_fluidcomp_uncorr': 'NIHTB: Fluid Composite Score', # Cognition fluid composite
+  'nihtb_crystallized_uncorr': 'NIHTB: Crystallized Intel.',
+  'nihtb_totalcomp_uncorr': 'NIHTB: Total Composite',
+  'nihtb_picvocab_uncorr': 'NIHTB: Picture Vocab.',
+  'nihtb_flanker_uncorr': 'NIHTB: Flanker Task',
+  'nihtb_list_uncorr': 'NIHTB: List Sorting',
+  'nihtb_cardsort_uncorr': 'NIHTB: Card Sorting',
+  'nihtb_pattern_uncorr': 'NIHTB: Pattern Comparison',
+  'nihtb_picture_uncorr': 'NIHTB: Picture Seq. Memory',
+  'nihtb_reading_uncorr': 'NIHTB: Oral Reading Recognition',
+  'anxdep_cbcl_raw': 'CBCL: AnxDep Syndrome',
+  'withdep_cbcl_raw': 'CBCL: WithDep Syndrome',
+  'somatic_cbcl_raw': 'CBCL: Somatic Syndrome',
+  'social_cbcl_raw': 'CBCL: Social Syndrome',
+  'thought_cbcl_raw': 'CBCL: Thought Syndrome',
+  'attention_cbcl_raw': 'CBCL: Attention Syndrome',
+  'rulebreak_cbcl_raw': 'CBCL: RuleBreak Syndrome',
+  'aggressive_cbcl_raw': 'CBCL: Aggressive Syndrome',
+  'internal_cbcl_raw': 'CBCL: Internal Syndrome',
+  'external_cbcl_raw': 'CBCL: External Syndrome',
+  'totalprob_cbcl_raw': 'CBCL: TotProb Syndrome',
+  'depress_dsm5_cbcl_raw': 'CBCL: Depress DSM5',
+  'anxdisord_dsm5_cbcl_raw': 'CBCL: AnxietyDx DSM5',
+  'somaticprob_dsm5_cbcl_raw': 'CBCL: SomaticProb DSM5',
+  'adhd_dsm5_cbcl_raw': 'CBCL: ADHD DSM5',
+  'opposit_dsm5_cbcl_raw': 'CBCL: Opposit DSM5',
+  'conduct_dsm5_cbcl_raw': "CBCL: Conduct DSM5",
+  'sct_cbcl_raw': 'CBCL: Sluggish Cog. Tempo',
+  'ocd_cbcl_raw': 'CBCL: Obsessive-Compulsive Prob.',
+  'stress_cbcl_raw': 'CBCL: Stress Scale',
+  'bisbas_bis': 'BISBAS: BIS Sum',
+  'bisbas_bis_mod': 'BISBAS: BIS Sum (Modified)',
+  'bisbas_reward': 'BISBAS: Reward Scale',
+  'bisbas_reward_mod': 'BISBAS: Reward Scale (Modified)',
+  'bisbas_drive': 'BISBAS: Drive Scale',
+  'bisbas_drive_mod': 'BISBAS: Drive Scale (Modified)',
+  'bisbas_fun': 'BISBAS: Fun-Seeking Scale'
+}
+
+
+
+process_map: {
+    't0':'Go Process',
+    'EEA':'Go Process',
+    'B':'Go Process',
+    'k': 'Go Process',
+    'v0':'Go Process',
+    'vT':'Go Process',
+    'vF':'Go Process',
+    'gf':'Go Process',
+    'tf':'Stop Process',
+    'mu':'Stop Process',
+    'sigma':'Stop Process',
+    'tau':'Stop Process',
+    'SSRT':'SSRT',
+    'issrt':'SSRT',
+    'correct_go_rt':'Go Process',
+    'correct_go_mrt':'Go Process',
+    'correct_go_stdrt':'Go Process'
+}
+
+target_map: {
+    't0':'Non-decision time ($t_0$)',
+    'EEA':'Efficiency of evidence acc. (EEA)',
+    'B':'Go evidence threshold ($B$)',
+    'k': 'Perceptual Growth Rate ($g$)',
+    'v0':'Go urgency ($v_0$)',
+    'vT':'Go match rate ($v_+$)',
+    'vF':'Go mismatch rate ($v_-$)',
+    'gf':'Probability of Go failure ($p_{gf}$)',
+    'tf':'Probability of trigger failure ($p_{tf}$)',
+    'mu':'Stop ExGaussian normal mean  ($\mu$)',
+    'sigma':'Stop ExGaussian normal SD ($\sigma$)',
+    'tau':'Stop ExGaussian exponential mean ($\tau$)',
+    'SSRT':'Model derived SSRT',
+    'issrt':'Empirical SSRT',
+    'correct_go_rt':'Go choice accuracy',
+    'correct_go_mrt':'Correct-Go response time (RT)',
+    'correct_go_stdrt':'Correct-Go RT variability',
+    'correct_go': 'Correct Go',
+    'incorrect_go': 'Incorrect Go',
+    'correct_stop': 'Correct Stop',
+    'incorrect_stop': 'Incorrect Stop'
+}
+
+
+contribution_pval_threshold: .01
+contribution_plot_metric: 'avg_reg_coef'
+phenotype_effectsize_threshold: .01
+posneg_mode_full: 'full'
+posneg_mode_compare: 'compare'
+compare_targets: ['Efficiency of evidence acc. (EEA)', 'Probability of trigger failure ($p_{tf}$)']
+compare_conditions: ['Correct Go', 'Correct Stop']
+model_labels: ['RDEX Only', 'Empirical Only',  'RDEX + Empirical']
+
+condition_by_target_columns: 'condition'
+condition_by_target_index: ['target', 'variable']
+target_by_condition_columns: 'target'
+target_by_condition_index: ['condition', 'variable']

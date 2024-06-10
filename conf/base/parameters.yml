@@ -1,0 +1,74 @@
+en: 'elastic'
+ridge: 'ridge'
+complete: True
+individual: False
+
+  # Behavior Inhibition/Activation Scale
+bisbas_vars: {
+    'bis_y_ss_bis_sum': 'bisbas_bis',
+    'bis_y_ss_bism_sum': 'bisbas_bis_mod',
+    'bis_y_ss_bas_rr': 'bisbas_reward',
+    'bis_y_ss_basm_rr': 'bisbas_reward_mod',
+    'bis_y_ss_bas_drive': 'bisbas_drive',
+    'bis_y_ss_basm_drive': 'bisbas_drive_mod',
+    'bis_y_ss_bas_fs': 'bisbas_fun'
+}
+
+# Urgency, (Lack of) Premeditation, (Lack of) Perserverence, and Sensation seeking
+upps_vars: {
+    'upps_y_ss_negative_urgency': 'upps_neg_urgency',
+    'upps_y_ss_lack_of_planning': 'upps_lack_planning',
+    'upps_y_ss_sensation_seeking': 'upps_sensation_seeking',
+    'upps_y_ss_positive_urgency': 'upps_positive_urgency',
+    'upps_y_ss_lack_of_perseverance': 'upps_lack_perseverance'
+}
+
+
+nihtb_vars: {
+    'nihtbx_fluidcomp_uncorrected': 'nihtb_fluidcomp_uncorr', # Cognition fluid composite
+    'nihtbx_cryst_uncorrected': 'nihtb_crystallized_uncorr',
+    'nihtbx_totalcomp_uncorrected': 'nihtb_totalcomp_uncorr',
+    'nihtbx_picvocab_uncorrected': 'nihtb_picvocab_uncorr',
+    'nihtbx_flanker_uncorrected': 'nihtb_flanker_uncorr',
+    'nihtbx_list_uncorrected': 'nihtb_list_uncorr',
+    'nihtbx_cardsort_uncorrected': 'nihtb_cardsort_uncorr',
+    'nihtbx_pattern_uncorrected': 'nihtb_pattern_uncorr',
+    'nihtbx_picture_uncorrected': 'nihtb_picture_uncorr',
+    'nihtbx_reading_uncorrected': 'nihtb_reading_uncorr'
+}
+
+
+
+# ASEBA
+# Child Behavior Checklist
+cbcl_vars: {
+    'cbcl_scr_syn_anxdep_r': 'anxdep_cbcl_raw',
+    'cbcl_scr_syn_withdep_r': 'withdep_cbcl_raw',
+    'cbcl_scr_syn_somatic_r': 'somatic_cbcl_raw',
+    'cbcl_scr_syn_social_r': 'social_cbcl_raw',
+    'cbcl_scr_syn_thought_r': 'thought_cbcl_raw',
+    'cbcl_scr_syn_attention_r': 'attention_cbcl_raw',
+    'cbcl_scr_syn_rulebreak_r': 'rulebreak_cbcl_raw',
+    'cbcl_scr_syn_aggressive_r': 'aggressive_cbcl_raw',
+    'cbcl_scr_syn_internal_r': 'internal_cbcl_raw',
+    'cbcl_scr_syn_external_r': 'external_cbcl_raw',
+    'cbcl_scr_syn_totprob_r': 'totalprob_cbcl_raw',
+    'cbcl_scr_dsm5_depress_r': 'depress_dsm5_cbcl_raw',
+    'cbcl_scr_dsm5_anxdisord_r': 'anxdisord_dsm5_cbcl_raw',
+    'cbcl_scr_dsm5_somaticpr_r': 'somaticprob_dsm5_cbcl_raw',
+    'cbcl_scr_dsm5_adhd_r': 'adhd_dsm5_cbcl_raw',
+    'cbcl_scr_dsm5_opposit_r': 'opposit_dsm5_cbcl_raw',
+    'cbcl_scr_dsm5_conduct_r': 'conduct_dsm5_cbcl_raw',
+    'cbcl_scr_07_sct_r': 'sct_cbcl_raw',
+    'cbcl_scr_07_ocd_r': 'ocd_cbcl_raw',
+    'cbcl_scr_07_stress_r': 'stress_cbcl_raw'
+}
+
+# brief problem monitor teacher
+bpm_vars:  {
+    'bpm_t_scr_attention_r': 'attention_bpmt_raw',
+    'bpm_t_scr_internal_r': 'internal_bpmt_raw',
+    'bpm_t_scr_external_r': 'external_bpmt_raw'
+}
+
+timepoint: 'baseline_year_1_arm_1'

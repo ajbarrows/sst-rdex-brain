@@ -1,0 +1,14 @@
+cbcl_params:
+  filter_query: "eventname == 'baseline_year_1_arm_1'"
+  filter_re: '^((?!sex|interview_age|eventname).)*$'
+  id_str: 'cbcl'
+  col_miss_threshold: 0.05
+  row_miss_threshold: 0
+
+nihtb_params:
+  filter_query: "eventname == 'baseline_year_1_arm_1'"
+  filter_re: '^((?!_v|_date|sex|interview_age|eventname|itmcnt).)*$'
+  id_str: 'nihtbx'
+  col_miss_threshold: 0.05
+  row_miss_threshold: 0
+

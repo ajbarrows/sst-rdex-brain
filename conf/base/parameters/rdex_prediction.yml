@@ -1,0 +1,18 @@
+regressor_contrasts: [
+    'incorrect_go - correct_go',
+    'correct_stop - correct_go',
+    'correct_stop - incorrect_stop',
+    'incorrect_go - incorrect_stop'
+]
+
+sst_metrics: [
+    'correct_go_mrt',
+    'correct_go_stdrt',
+    'correct_go_rt',
+    'issrt'
+]
+
+sst_metrics_predict: ['issrt']
+
+resid_for: ['issrt']
+to_resid: ['tf', 'SSRT']

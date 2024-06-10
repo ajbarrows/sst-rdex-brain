@@ -1,0 +1,37 @@
+beh_conditions: {
+    '_go': 'go',
+    'beh_s': 'stop',
+    '_crgo': 'correct_go',
+    '_crlg': 'correct_latego',
+    '_crs': 'correct_stop',
+    'incrgo': 'incorrect_go',
+    'incrlg': 'incorrect_latego',
+    'nrgo': 'noresponse_go',
+    'incrs': 'incorrect_stop'
+}
+
+beh_rt_vars: {
+    'tfmri_sst_all_beh_crgo_mrt': 'correct_go_mrt',
+    'tfmri_sst_all_beh_incrgo_mrt': 'incorrect_go_mrt',
+    'tfmri_sst_all_beh_crgo_stdrt': 'correct_go_stdrt',
+    'tfmri_sst_all_beh_incrgo_stdrt': 'incorrect_go_stdrt',
+    'tfmri_sst_all_beh_crlg_mrt': 'correct_latego_mrt',
+    'tfmri_sst_all_beh_crlg_stdrt': 'correct_latego_stdrt',
+    'tfmri_sst_all_beh_incrlg_mrt': 'incorrect_latego_mrt',
+    'tfmri_sst_all_beh_incrlg_stdrt': 'incorrect_latego_stdrt',
+    'tfmri_sst_all_beh_total_mssrt': 'mssrt',
+    'tfmri_sst_all_beh_total_issrt': 'issrt'
+
+}
+
+mh_keywords:
+    - bisbas
+    - cbcl
+    - eatq
+    - nihtb
+    - poa
+    - bpm
+    - upps
+
+neurocog_keywords:
+    - nihtb

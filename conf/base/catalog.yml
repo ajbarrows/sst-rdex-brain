@@ -1,0 +1,237 @@
+# Inputs
+weigard_map:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/SST_MAPS_base_r3.csv 
+  load_args: 
+    index_col: [0]
+
+weigard_posterior_draws:
+  type: PartitionedDataSet
+  path: data/03_primary/posterior_samples/
+  filename_suffix: ".csv"
+  dataset: 
+    type: pandas.CSVDataSet
+    load_args:
+      index_col: [0]
+
+dk_ssrt:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/SSRT_Release_3-0_dk.csv
+
+sst_behavior:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/ABCDr5-1/core/imaging/mri_y_tfmr_sst_beh.csv
+
+mri_qc:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/ABCDr5-1/core/imaging/mri_y_qc_incl.csv
+
+
+confounders:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/confounds.csv
+phenotype_empirical.confounders:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/confounds.csv
+phenotype_rdex.confounders:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/confounds.csv
+phenotype_both.confounders:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/confounds.csv
+
+scanner_info:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/abcd_mri01.csv
+
+sst_head_motion:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/mriqcrp203.csv
+
+sst_inhouse_contrasts:
+  type: PartitionedDataSet
+  path: data/02_intermediate/ProcessedSSTContrasts/
+  dataset:
+    type: pandas.CSVDataSet
+
+sst_regressors:
+  type: PartitionedDataSet
+  path: data/02_intermediate/brain/vertexwise/sst_regressors
+  filename_suffix: ".mat"
+  dataset:
+    type: sst_rdex_brain.extras.datasets.matlab_dataset.MatlabDataSet
+
+regressors_pguids:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/brain/vertexwise/sst_regressors_pguids.csv
+
+# Phenotype
+# parse 5.0 release data
+mental_health:
+  type: PartitionedDataSet
+  path: data/02_intermediate/ABCDr5-1/core/mental-health
+  filename_suffix: ".csv"
+  dataset:
+    type: pandas.CSVDataSet
+
+neurocognition:
+  type: PartitionedDataSet
+  path: data/02_intermediate/ABCDr5-1/core/neurocognition
+  filename_suffix: ".csv"
+  dataset:
+    type: pandas.CSVDataSet
+
+
+
+# Processed Data
+
+sst_computed_contrasts:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/sst_computed_contrasts.parquet
+
+phenotype:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/phenotype.csv
+  save_args:
+    index: True
+phenotype_empirical.phenotype:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/phenotype.csv
+  save_args:
+    index: True
+phenotype_both.phenotype:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/phenotype.csv
+  save_args:
+    index: True
+phenotype_rdex.phenotype:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/phenotype.csv
+  save_args:
+    index: True
+
+
+sst_metrics:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/sst_metrics.csv
+  save_args:
+    index: True
+
+sst_metrics_filtered:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/sst_metrics_filtered.csv
+  save_args:
+    index: True
+  load_args: 
+    index_col: [0]
+
+
+rdex_target_df:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/rdex_target_df.csv
+  save_args:
+    index: True
+  load_args:
+    index_col: [0]
+phenotype_empirical.rdex_target_df:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/rdex_target_df.csv
+  save_args:
+    index: True
+  load_args:
+    index_col: [0]
+phenotype_rdex.rdex_target_df:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/rdex_target_df.csv
+  save_args:
+    index: True
+  load_args:
+    index_col: [0]
+phenotype_both.rdex_target_df:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/rdex_target_df.csv
+  save_args:
+    index: True
+  load_args:
+    index_col: [0]
+
+
+
+# Model Output
+
+map_all_regressor_results:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/map_all_regressor_results.pkl
+map_all_regressor_summary:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/map_all_regressor_summary.csv
+  save_args:
+    index: False
+map_all_regressor_feat_imp:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/map_all_regressor_feat_imp.csv
+map_model_contribution_scores:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/map_model_contribution_scores.csv
+
+phenotype_full_results:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/phenotype_prediction/phenotype_full_results.pkl
+phenotype_full_summary:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/phenotype_prediction/phenotype_full_summary.csv
+  save_args:
+    index: False
+phenotype_feat_imp:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/phenotype_feat_imp.csv
+
+
+phenotype_rdex_results:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/phenotype_prediction/phenotype_rdex_results.pkl
+phenotype_rdex_summary:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/phenotype_prediction/phenotype_rdex_summary.csv
+  save_args:
+    index: False
+phenotype_rdex_feat_imp:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/phenotype_rdex_feat_imp.csv
+
+phenotype_empirical_results:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/phenotype_prediction/phenotype_empirical_results.pkl
+phenotype_empirical_summary:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/phenotype_prediction/phenotype_empirical_summary.csv
+  save_args:
+    index: False
+phenotype_empirical_feat_imp:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/phenotype_empirical_feat_imp.csv
+
+phenotype_permutation:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/phenotype_permutation.pkl
+phenotype_summary_fdr_corrected:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/phenotype_prediction/phenotype_summary_fdr_corrected.csv
+
+
+phenotype_supplement_table:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/phenotype_supplement_table.csv
+  save_args:
+    index: True
+
+
+# crosspredict
+crosspredict_results:
+  type: pickle.PickleDataSet
+  filepath: data/07_model_output/crosspredict_results.pkl
+crosspredict_results_summary:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/crosspredict_results_summary.csv
+  save_args:
+    index: False

@@ -1,0 +1,56 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(GGally)
+
+source("../scripts/make_smooth_plots.R")
+```
+
+```{r}
+df <- load_data()
+head(df)
+```
+
+```{r}
+df <- df %>%
+  select(-c(subjectkey, tf.natural, gf.natural, issrt))
+head(df)
+```
+
+
+
+```{r}
+var_names = names(df)
+n = length(var_names)
+par(mfrow(n, n))
+
+for (i in var_names){
+     x <- df[, i]
+  for (j in var_names){
+      y <- df[, j]
+      
+      r <- cor(x, y)
+      model <- lm(y~x)
+      
+      title <- paste0("r = ", round(r, 2))
+            
+      smoothScatter(x, y, 
+                    xlab=i,
+                    ylab=j,
+                    xaxt = 'n',
+                    yaxt = 'n',
+                    cex.lab=2.25)
+      
+      abline(model)
+      axis(side=4, yaxt = 'n')
+      mtext(title, side=1, line=1, las=2, cex=1.8)
+  }
+}
+```
+

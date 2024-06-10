@@ -1,0 +1,31 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sst_rdex_brain"
+readme = "README.md"
+dynamic = [ "dependencies", "version",]
+
+[project.scripts]
+sst-rdex-brain = "sst_rdex_brain.__main__:main"
+
+[tool.kedro]
+package_name = "sst_rdex_brain"
+project_name = "sst-rdex-brain"
+kedro_init_version = "0.18.10"
+#tools = [ "Data Structure",]
+#example_pipeline = "False"
+source_dir = "src"
+
+[project.entry-points."kedro.hooks"]
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+[tool.setuptools.dynamic.version]
+attr = "sst_rdex_brain.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false
